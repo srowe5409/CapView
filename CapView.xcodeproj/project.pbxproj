@@ -12,6 +12,8 @@
 		4334C0D01E12274D00F79FD2 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4334C0CF1E12274D00F79FD2 /* ViewController.m */; };
 		4334C0D21E12274D00F79FD2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4334C0D11E12274D00F79FD2 /* Assets.xcassets */; };
 		4334C0D51E12274D00F79FD2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4334C0D31E12274D00F79FD2 /* Main.storyboard */; };
+		4334C0DE1E1228A000F79FD2 /* CustomView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4334C0DD1E1228A000F79FD2 /* CustomView.m */; };
+		4334C0E11E122C3200F79FD2 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4334C0E01E122C3200F79FD2 /* AVFoundation.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,9 @@
 		4334C0D11E12274D00F79FD2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4334C0D41E12274D00F79FD2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		4334C0D61E12274D00F79FD2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4334C0DC1E1228A000F79FD2 /* CustomView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomView.h; sourceTree = "<group>"; };
+		4334C0DD1E1228A000F79FD2 /* CustomView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomView.m; sourceTree = "<group>"; };
+		4334C0E01E122C3200F79FD2 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +36,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4334C0E11E122C3200F79FD2 /* AVFoundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -42,6 +48,7 @@
 			children = (
 				4334C0C71E12274D00F79FD2 /* CapView */,
 				4334C0C61E12274D00F79FD2 /* Products */,
+				4334C0DF1E122C3200F79FD2 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -60,6 +67,8 @@
 				4334C0C91E12274D00F79FD2 /* AppDelegate.m */,
 				4334C0CE1E12274D00F79FD2 /* ViewController.h */,
 				4334C0CF1E12274D00F79FD2 /* ViewController.m */,
+				4334C0DC1E1228A000F79FD2 /* CustomView.h */,
+				4334C0DD1E1228A000F79FD2 /* CustomView.m */,
 				4334C0D11E12274D00F79FD2 /* Assets.xcassets */,
 				4334C0D31E12274D00F79FD2 /* Main.storyboard */,
 				4334C0D61E12274D00F79FD2 /* Info.plist */,
@@ -74,6 +83,14 @@
 				4334C0CC1E12274D00F79FD2 /* main.m */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		4334C0DF1E122C3200F79FD2 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4334C0E01E122C3200F79FD2 /* AVFoundation.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -148,6 +165,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4334C0D01E12274D00F79FD2 /* ViewController.m in Sources */,
+				4334C0DE1E1228A000F79FD2 /* CustomView.m in Sources */,
 				4334C0CD1E12274D00F79FD2 /* main.m in Sources */,
 				4334C0CA1E12274D00F79FD2 /* AppDelegate.m in Sources */,
 			);
