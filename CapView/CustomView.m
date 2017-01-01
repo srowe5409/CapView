@@ -17,7 +17,7 @@
     CGContextSetRGBFillColor(context, 0, 0, 0, 0.50);
     CGContextFillRect(context, NSRectToCGRect(dirtyRect));
     self.layer.borderColor = [[NSColor whiteColor]CGColor];
-    self.layer.borderWidth = 4.0F;
+    self.layer.borderWidth = 2.0F;
                             
 }
 
