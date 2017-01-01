@@ -669,20 +669,24 @@
                         <rect key="frame" x="0.0" y="0.0" width="808" height="356"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
-                            <stackView distribution="fill" orientation="horizontal" alignment="top" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" fixedFrame="YES" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="V6L-h6-tKn">
+                            <stackView distribution="fill" orientation="horizontal" alignment="top" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="V6L-h6-tKn">
                                 <rect key="frame" x="20" y="174" width="368" height="162"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
-                                    <customView ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="QuG-Pa-emU" customClass="CustomView">
+                                    <customView translatesAutoresizingMaskIntoConstraints="NO" id="QuG-Pa-emU" customClass="CustomView">
                                         <rect key="frame" x="0.0" y="0.0" width="164" height="162"/>
                                     </customView>
-                                    <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rxF-mh-C9a">
+                                    <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="rxF-mh-C9a">
                                         <rect key="frame" x="172" y="0.0" width="196" height="162"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="196" id="6nN-NS-YSO"/>
+                                        </constraints>
                                         <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" id="gK2-Zg-2Rp"/>
                                     </imageView>
                                 </subviews>
                                 <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="QuG-Pa-emU" secondAttribute="bottom" id="2Fy-4z-B1F"/>
                                     <constraint firstItem="rxF-mh-C9a" firstAttribute="leading" secondItem="QuG-Pa-emU" secondAttribute="trailing" constant="8" id="Iqo-0S-Bcm"/>
+                                    <constraint firstItem="QuG-Pa-emU" firstAttribute="bottom" secondItem="rxF-mh-C9a" secondAttribute="bottom" id="uxh-rf-xDs"/>
                                 </constraints>
                                 <visibilityPriorities>
                                     <integer value="1000"/>
@@ -693,9 +697,8 @@
                                     <real value="3.4028234663852886e+38"/>
                                 </customSpacing>
                             </stackView>
-                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="HaS-x4-DF7">
+                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="HaS-x4-DF7">
                                 <rect key="frame" x="100" y="132" width="70" height="32"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <buttonCell key="cell" type="push" title="Start" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="5tA-pg-jAH">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="system"/>
@@ -704,9 +707,8 @@
                                     <action selector="startPreview_click:" target="XfG-lQ-9wD" id="tEc-pv-rRG"/>
                                 </connections>
                             </button>
-                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="LbI-X6-Qgf">
+                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="LbI-X6-Qgf">
                                 <rect key="frame" x="166" y="132" width="69" height="32"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <buttonCell key="cell" type="push" title="Stop" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="Qle-Ku-Ou9">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="system"/>
@@ -715,9 +717,8 @@
                                     <action selector="stopPreview_click:" target="XfG-lQ-9wD" id="zhc-D6-Go3"/>
                                 </connections>
                             </button>
-                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wJh-mm-gfo">
+                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="wJh-mm-gfo">
                                 <rect key="frame" x="231" y="132" width="89" height="32"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <buttonCell key="cell" type="push" title="Capture" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="IlR-6H-yV6">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="system"/>
@@ -727,6 +728,18 @@
                                 </connections>
                             </button>
                         </subviews>
+                        <constraints>
+                            <constraint firstItem="LbI-X6-Qgf" firstAttribute="leading" secondItem="HaS-x4-DF7" secondAttribute="trailing" constant="8" id="AxK-04-FhK"/>
+                            <constraint firstItem="wJh-mm-gfo" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="237" id="CFI-TK-5TA"/>
+                            <constraint firstItem="V6L-h6-tKn" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="20" symbolic="YES" id="Rix-HO-td9"/>
+                            <constraint firstItem="wJh-mm-gfo" firstAttribute="top" secondItem="V6L-h6-tKn" secondAttribute="bottom" constant="14" id="Viv-sP-7k6"/>
+                            <constraint firstAttribute="bottom" secondItem="V6L-h6-tKn" secondAttribute="bottom" constant="174" id="WSx-dK-Gqw"/>
+                            <constraint firstAttribute="trailing" secondItem="V6L-h6-tKn" secondAttribute="trailing" constant="420" id="f6A-yg-Bzx"/>
+                            <constraint firstItem="wJh-mm-gfo" firstAttribute="baseline" secondItem="HaS-x4-DF7" secondAttribute="baseline" id="kz7-J6-zcI"/>
+                            <constraint firstItem="wJh-mm-gfo" firstAttribute="leading" secondItem="LbI-X6-Qgf" secondAttribute="trailing" constant="8" id="wOF-nD-9n4"/>
+                            <constraint firstItem="wJh-mm-gfo" firstAttribute="baseline" secondItem="LbI-X6-Qgf" secondAttribute="baseline" id="y0h-ag-7Z6"/>
+                            <constraint firstItem="V6L-h6-tKn" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" constant="20" symbolic="YES" id="zgn-Ty-gBT"/>
+                        </constraints>
                     </view>
                     <connections>
                         <outlet property="captureButton" destination="wJh-mm-gfo" id="dtI-ay-p2I"/>
